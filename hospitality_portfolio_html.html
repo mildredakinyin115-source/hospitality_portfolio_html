@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Copywriter - Hospitality & F&B Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #fb923c, #f87171, #fb7185);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .blur-blob {
+            filter: blur(100px);
+            opacity: 0.3;
+        }
+
+        .portfolio-section {
+            display: none;
+        }
+
+        .portfolio-section.active {
+            display: grid;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .testimonial-slide {
+            display: none;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 rounded-xl flex items-center justify-center font-bold text-2xl shadow-lg">
+                        A
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl">Alex Copywriter</div>
+                        <div class="text-xs text-slate-400">Hospitality & F&B Specialist</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#work" class="hover:text-orange-400 transition font-medium">Portfolio</a>
+                    <a href="#services" class="hover:text-orange-400 transition font-medium">Services</a>
+                    <a href="#testimonials" class="hover:text-orange-400 transition font-medium">Results</a>
+                    <a href="#contact" class="hover:text-orange-400 transition font-medium">Contact</a>
+                    <a href="https://wa.me/254721791158?text=Hi!%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20copywriting%20for%20my%20hospitality%20business." target="_blank" class="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105 shadow-lg flex items-center gap-2">
+                        <i class="fas fa-comment-dots"></i> Let's Talk
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden bg-slate-800 p-2 rounded-lg">
+                    <i class="fas fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 shadow-2xl">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#work" class="block hover:text-orange-400 font-medium py-2">Portfolio</a>
+                <a href="#services" class="block hover:text-orange-400 font-medium py-2">Services</a>
+                <a href="#testimonials" class="block hover:text-orange-400 font-medium py-2">Results</a>
+                <a href="#contact" class="block hover:text-orange-400 font-medium py-2">Contact</a>
+                <a href="https://wa.me/254721791158" target="_blank" class="block bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-semibold transition text-center">
+                    <i class="fas fa-comment-dots"></i> WhatsApp Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-40 pb-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-orange-900/10 via-transparent to-transparent"></div>
+        <div class="absolute top-20 right-10 w-96 h-96 bg-orange-500 rounded-full blur-blob"></div>
+        <div class="absolute bottom-0 left-10 w-96 h-96 bg-red-500 rounded-full blur-blob"></div>
+        
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="inline-block mb-6 px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full text-orange-400 text-sm font-semibold">
+                ✨ 250+ Successful Hospitality Campaigns
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight">
+                <span class="gradient-text">Words That</span><br>
+                <span class="text-white">Fill Tables.</span>
+            </h1>
+            
+            <p class="text-2xl md:text-3xl text-slate-300 mb-6 max-w-4xl mx-auto font-light">
+                Copywriting for <span class="text-orange-400 font-semibold">restaurants, hotels, safari operators & hospitality brands</span> that turns scrollers into bookings.
+            </p>
+            
+            <p class="text-xl text-slate-400 mb-12 max-w-3xl mx-auto">
+                No generic "delicious food" captions. No "warm hospitality" clichés. Just high-converting copy that makes people <span class="text-white font-semibold">stop, feel, and act</span>.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+                <a href="https://wa.me/254721791158?text=Hi!%20I%20want%20to%20discuss%20copywriting%20for%20my%20hospitality%20business." target="_blank" class="group flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 px-10 py-5 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-comment-dots"></i> WhatsApp: 0721 791 158
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </a>
+                <a href="tel:+254721791158" class="group flex items-center gap-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 px-10 py-5 rounded-xl font-bold text-lg transition transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-phone"></i> Call Now
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </a>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <i class="fas fa-chart-line text-orange-400 text-4xl mb-3"></i>
+                    <div class="text-4xl font-black text-white mb-2">89%</div>
+                    <div class="text-sm text-slate-400">Avg. Engagement Increase</div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-trophy text-orange-400 text-4xl mb-3"></i>
+                    <div class="text-4xl font-black text-white mb-2">250+</div>
+                    <div class="text-sm text-slate-400">Hospitality Campaigns</div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-star text-orange-400 text-4xl mb-3"></i>
+                    <div class="text-4xl font-black text-white mb-2">3.2M</div>
+                    <div class="text-sm text-slate-400">Total Revenue Generated</div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-check-circle text-orange-400 text-4xl mb-3"></i>
+                    <div class="text-4xl font-black text-white mb-2">98%</div>
+                    <div class="text-sm text-slate-400">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Grid -->
+    <section id="sectors" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900/50 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black mb-6">Sectors I Dominate</h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                    Each hospitality sector needs different psychology. I speak all their languages.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-hover group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 cursor-pointer" onclick="showSector('restaurants')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition"></div>
+                    <div class="relative z-10">
+                        <i class="fas fa-utensils text-5xl mb-5 text-slate-500 group-hover:text-orange-400 transition"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Restaurants</h3>
+                        <p class="text-slate-400 text-sm mb-4">Click to view samples →</p>
+                    </div>
+                </div>
+
+                <div class="card-hover group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 cursor-pointer" onclick="showSector('hotels')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition"></div>
+                    <div class="relative z-10">
+                        <i class="fas fa-hotel text-5xl mb-5 text-slate-500 group-hover:text-orange-400 transition"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Hotels & Resorts</h3>
+                        <p class="text-slate-400 text-sm mb-4">Click to view samples →</p>
+                    </div>
+                </div>
+
+                <div class="card-hover group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 cursor-pointer" onclick="showSector('safari')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition"></div>
+                    <div class="relative z-10">
+                        <i class="fas fa-tree text-5xl mb-5 text-slate-500 group-hover:text-orange-400 transition"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Safari & Tours</h3>
+                        <p class="text-slate-400 text-sm mb-4">Click to view samples →</p>
+                    </div>
+                </div>
+
+                <div class="card-hover group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 cursor-pointer" onclick="showSector('cafes')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 opacity-0 group-hover:opacity-100 transition"></div>
+                    <div class="relative z-10">
+                        <i class="fas fa-coffee text-5xl mb-5 text-slate-500 group-hover:text-orange-400 transition"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Cafés & Bars</h3>
+                        <p class="text-slate-400 text-sm mb-4">Click to view samples →</p>
+                    </div>
+                </div>
+
+                <div class="card-hover group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 cursor-pointer" onclick="showSector('events')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition"></div>
+                    <div class="relative z-10">
+                        <i class="fas fa-users text-5xl mb-5 text-slate-500 group-hover:text-orange-400 transition"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Event Venues</h3>
+                        <p class="text-slate-400 text-sm mb-4">Click to view samples →</p>
+                    </div>
+                </div>
+
+                <div class="card-hover group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 cursor-pointer" onclick="showSector('beach')">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition"></div>
+                    <div class="relative z-10">
+                        <i class="fas fa-umbrella-beach text-5xl mb-5 text-slate-500 group-hover:text-orange-400 transition"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Beach Resorts</h3>
+                        <p class="text-slate-400 text-sm mb-4">Click to view samples →</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Work -->
+    <section id="work" class="py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black mb-6">Real Work. Real Results.</h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                    Before & after examples from actual hospitality clients. See how strategic copy transforms engagement, bookings, and revenue.
+                </p>
+            </div>
+
+            <!-- Sector Tabs -->
+            <div class="flex flex-wrap gap-3 mb-16 justify-center">
+                <button onclick="showSector('restaurants')" class="sector-tab flex items-center gap-2 px-6 py-4 rounded-xl font-bold transition-all duration-300 bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-xl" data-sector="restaurants">
+                    <i class="fas fa-utensils"></i> Restaurants
+                </button>
+                <button onclick="showSector('hotels')" class="sector-tab flex items-center gap-2 px-6 py-4 rounded-xl font-bold transition-all duration-300 bg-slate-800 text-slate-300 hover:bg-slate-700" data-sector="hotels">
+                    <i class="fas fa-hotel"></i> Hotels
+                </button>
+                <button onclick="showSector('safari')" class="sector-tab flex items-center gap-2 px-6 py-4 rounded-xl font-bold transition-all duration-300 bg-slate-800 text-slate-300 hover:bg-slate-700" data-sector="safari">
+                    <i class="fas fa-tree"></i> Safari
+                </button>
+                <button onclick="showSector('cafes')" class="sector-tab flex items-center gap-2 px-6 py-4 rounded-xl font-bold transition-all duration-300 bg-slate-800 text-slate-300 hover:bg-slate-700" data-sector="cafes">
+                    <i class="fas fa-coffee"></i> Cafés
+                </button>
+                <button onclick="showSector('events')" class="sector-tab flex items-center gap-2 px-6 py-4 rounded-xl font-bold transition-all duration-300 bg-slate-800 text-slate-300 hover:bg-slate-700" data-sector="events">
+                    <i class="fas fa-users"></i> Events
+                </button>
+                <button onclick="showSector('beach')" class="sector-tab flex items-center gap-2 px-6 py-4 rounded-xl font-bold transition-all duration-300 bg-slate-800 text-slate-300 hover:bg-slate-700" data-sector="beach">
+                    <i class="fas fa-umbrella-beach"></i> Beach
+                </button>
+            </div>
+
+            <!-- Portfolio Grid - Restaurants -->
+            <div id="portfolio-restaurants" class="portfolio-section active grid lg:grid-cols-2 gap-8">
+                <!-- Restaurant Example 1 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Fine Dining Launch - Nairobi CBD</h3>
+                            <p class="text-slate-400 text-sm mb-3">Osteria Milano</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Instagram Launch Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"New Italian restaurant. Great pasta. Book now. Call us for reservations."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Where Nairobi meets Milano. Hand-rolled pasta. Wood-fired perfection. Every plate tells a story—yours starts tonight. Reservations filling fast. Book: 0721791158 🍝"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+156%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Engagement</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+42%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+3,200</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Followers</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Fully booked in 48 hours • Waitlist of 38 couples • Premium pricing maintained</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Example 4 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Brunch Spot - Instagram Growth</h3>
+                            <p class="text-slate-400 text-sm mb-3">Sunday Social Karen</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Social Media Strategy
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Weekend brunch available. Avocado toast, pancakes, coffee. Open 9am Saturday and Sunday."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Avocado toast that breaks the internet. Mimosas that heal Monday. Pancakes your therapist would approve of. This isn't brunch—it's a lifestyle intervention. Weekends 9am. Your feed will thank you. Book: 0721791158 📸"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+267%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Engagement</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+4,800</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Followers</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+340%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Mentions</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">4,800 new followers in 90 days • 85% weekend capacity • Featured in 3 lifestyle blogs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid - Hotels -->
+            <div id="portfolio-hotels" class="portfolio-section grid lg:grid-cols-2 gap-8">
+                <!-- Hotel Example 1 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Boutique Hotel - Staycation Package</h3>
+                            <p class="text-slate-400 text-sm mb-3">The Nest Kileleshwa</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Email + Social Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Weekend getaway package available. Pool, spa, restaurant included. Book your room today."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Escape without the flight. Luxury without the jet lag. Our weekend staycation: king bed views, infinity pool mornings, spa afternoons, sunset cocktails. Your reset button is 30 minutes away. Book: 0721791158 🏨"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+43%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Occupancy</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 2.1M</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+67</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Reviews</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">87% occupancy during off-peak • KSH 2.1M additional revenue in Q1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Example 2 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Safari Lodge - Honeymoon Package</h3>
+                            <p class="text-slate-400 text-sm mb-3">Mara Pride Lodge</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Instagram Series + Email
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Honeymoon special rates available. Romantic setting with wildlife viewing opportunities."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Your first sunrise as husband and wife. Lions roaring in the distance. Champagne on your private deck. Breakfast delivered by zebra escort. This is how forever begins. Honeymoon packages: 0721791158 💍"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">23</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 5.7M</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">4.9/5</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Reviews</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">23 honeymoon bookings in 2 months • 94% 5-star reviews • Featured in wedding blogs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Example 3 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Business Hotel - Corporate Contracts</h3>
+                            <p class="text-slate-400 text-sm mb-3">Executive Suites Upper Hill</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                LinkedIn + B2B Email
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Special corporate rates for business travelers. Conference facilities and WiFi available."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Where deals get done. High-speed WiFi faster than your deadline. Power breakfast included. Conference rooms that mean business. Your team's efficiency. Our infrastructure. Corporate rates that make CFOs smile. Inquire: 0721791158"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">7</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Contracts</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">180/mo</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Room Nights</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">100%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Retention</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Secured 7 corporate contracts • 180+ room nights monthly • 3-year renewal rate: 100%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Example 4 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Luxury Resort - Holiday Season</h3>
+                            <p class="text-slate-400 text-sm mb-3">Paradise Cove Diani</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Holiday Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Book your Christmas holiday at our beach resort. Special rates for December bookings."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"December 25th. Toes in sand. Champagne in hand. No awkward family dinners—just ocean, sun, and the best decision you made this year. Christmas at Paradise Cove. Limited villas. Book: 0721791158 🎄🏖️"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">100%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 8.9M</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">12</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Waitlist</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Fully booked by October 15 • Premium rates maintained • 12-person waitlist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid - Safari -->
+            <div id="portfolio-safari" class="portfolio-section grid lg:grid-cols-2 gap-8">
+                <!-- Safari Example 1 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Safari Operator - Migration Season</h3>
+                            <p class="text-slate-400 text-sm mb-3">Wilderness Trackers</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Campaign Series + PR
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Wildebeest migration tours now available. Book now for best prices. Limited availability."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Two million wildebeest. One thousand crocodiles. Zero guarantees except this: you'll never forget it. The Great Migration—nature's greatest show. July-October. 8 safari slots left. Don't watch it on TV. Live it. Book: 0721791158 🦁"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">34</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 12.7M</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">4 Features</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Press</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">34 safari bookings • KSH 12.7M revenue in 8 weeks • Featured in Travel + Leisure</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safari Example 2 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Luxury Safari - Family Adventure</h3>
+                            <p class="text-slate-400 text-sm mb-3">Savanna Kids Safaris</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Email + Social Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Family-friendly safari packages available. Kids welcome. Educational and fun experience."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Where your kids learn that lions don't live in zoos. Family safari: guided drives, junior ranger program, campfire stories under stars so bright they'll forget their iPads exist. Ages 6+. Memories > Screen Time. Book: 0721791158"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">22</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">58%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Repeat</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">4.9/5</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Rating</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">22 family safari bookings • 58% repeat customer rate • 4.9★ family reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safari Example 3 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Safari & Beach Combo</h3>
+                            <p class="text-slate-400 text-sm mb-3">Coast to Bush Safaris</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Landing Page + Ads
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Combine safari and beach holiday. Best of both experiences. Contact us for package details."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Bush to beach. Lions to lagoons. 5 days tracking the Big Five. 5 days in Indian Ocean paradise. One trip. Two worlds. Zero regrets. The ultimate Kenyan adventure. Limited combo slots. Book: 0721791158 🏖️🦁"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+178%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Sales</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 385K</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Avg Value</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+34%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Margin</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Combo package sales increased 178% • Average booking value: KSH 385K</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safari Example 4 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Walking Safari - Adventure Niche</h3>
+                            <p class="text-slate-400 text-sm mb-3">On Foot Safaris</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Brand Positioning + Content
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Experience walking safaris with professional guides. Safe and educational wildlife experience."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"No engine noise. No glass between you and wild. Just boots, dust, and the ancient rhythm of walking where lions walk. For travelers who want to feel Africa, not just see it. Walking safaris: 0721791158 🥾"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">89%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Conversion</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+45%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Premium</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">Leader</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Market</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Niche positioning secured • 89% booking rate from inquiries • Premium pricing achieved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid - Cafes -->
+            <div id="portfolio-cafes" class="portfolio-section grid lg:grid-cols-2 gap-8">
+                <!-- Cafe Example 1 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Specialty Coffee - Morning Rush</h3>
+                            <p class="text-slate-400 text-sm mb-3">Black Gold Westlands</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Instagram Daily Content
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Fresh coffee daily. Breakfast menu available. Open from 7am every morning."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Before the meetings. Before the chaos. Before you remember you're an adult. There's this: freshly pulled espresso, buttery croissants, 20 minutes of peace. Your morning ritual starts here. 7am daily. ☕"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+67%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">340+</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Regulars</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+89%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Traffic</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Morning revenue up 67% • Became neighborhood staple • 340+ regular customers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cafe Example 2 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Wine Bar - Weekend Launch</h3>
+                            <p class="text-slate-400 text-sm mb-3">Vinoteca Kilimani</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Launch Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"New wine bar opening this weekend. Great wine selection. Live music on Friday and Saturday."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Uncork the weekend. 40+ wines by the glass. Live jazz that makes you forget it's only Friday. Dim lights. Good people. Better conversations. Reserve your spot—tables filling fast: 0721791158 🍷"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">100%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Capacity</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">280</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Waitlist</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">12</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Residencies</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Opening weekend 100% capacity • 280-person waitlist • Secured residency bookings</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cafe Example 3 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Craft Beer Garden - Summer Campaign</h3>
+                            <p class="text-slate-400 text-sm mb-3">Hops & Barley Karen</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Seasonal Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Summer specials on craft beer. Outdoor seating available. Come enjoy the weather."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Cold beer. Hot sun. Zero judgment if you start at noon. Our beer garden: 12 taps, outdoor bliss, the kind of Saturday that turns into Sunday. Summer hours extended. Cheers to that: 0721791158 🍺"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+134%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Traffic</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 890K</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Sales/mo</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">23</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Events</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Weekend traffic up 134% • Beer sales +KSH 890K monthly • Event bookings +23</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cafe Example 4 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Dessert Café - Instagram Strategy</h3>
+                            <p class="text-slate-400 text-sm mb-3">Sugar Rush Kilimani</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Social Strategy + UGC
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Homemade desserts and coffee. Instagram-worthy presentations. Visit us today."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Dessert so photogenic it has its own following. Matcha lattes that make your ex jealous. This is not just a café—it's your new profile aesthetic. Open till 11pm. Your feed called. It wants in: 0721791158 📸"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+6,700</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Followers</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">940+</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">UGC</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">8</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Influencers</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">6,700 new followers in 4 months • 940+ user-generated posts • Influencer partnerships: 8</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid - Events -->
+            <div id="portfolio-events" class="portfolio-section grid lg:grid-cols-2 gap-8">
+                <!-- Event Example 1 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Wedding Venue - Peak Season</h3>
+                            <p class="text-slate-400 text-sm mb-3">Garden Manor Kiambu</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Wedding Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Beautiful wedding venue available. Garden setting with indoor backup. Contact for availability."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Where 'I do' meets 'I can't believe this is real.' Garden Manor: 200-guest capacity, sunset ceremonies, reception halls that photograph like a dream. Your Pinterest board just became reality. 2025 dates filling: 0721791158 💍"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">18</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 450K</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Avg Value</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">5.0/5</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Reviews</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">18 wedding bookings for 2025 • Average booking: KSH 450K • 100% 5-star reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Example 2 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Corporate Event Space - B2B</h3>
+                            <p class="text-slate-400 text-sm mb-3">Summit Hall Westlands</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                B2B LinkedIn Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Corporate event space for meetings and conferences. Modern facilities and catering available."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Where your team stops checking phones and starts checking in. Summit Hall: 500-capacity, theater-style or banquet, AV that actually works, catering that doesn't taste like 'conference food.' Your next big idea needs a big space: 0721791158"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">34</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">12</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Repeat</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 3.2M</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue/Q</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">34 corporate bookings • 12 repeat clients • KSH 3.2M quarterly revenue</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Example 3 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Private Dining - Exclusive Events</h3>
+                            <p class="text-slate-400 text-sm mb-3">The Vault Nairobi</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Exclusivity Positioning
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Private dining room available for special occasions. Customizable menu. Book in advance."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"12 guests. One room. Zero interruptions. The Vault: where proposals happen, deals close, and birthdays become legendary. Private chef. Custom menu. Your secret address for special moments: 0721791158 🥂"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">100%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+67%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Pricing</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">93%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Referrals</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Fully booked 8 weeks in advance • Premium pricing maintained • Word-of-mouth only</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Example 4 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Rooftop Event Space - Sunset Parties</h3>
+                            <p class="text-slate-400 text-sm mb-3">Skyline Terrace CBD</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Social Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Rooftop venue for private events. Great views. Bar service available. Book for your party."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Your party. Our rooftop. Nairobi skyline as the backdrop. Sunset cocktails that make everyone forget their Monday morning. Birthday? Launch? Just because? This is where legends are made. Book: 0721791158 🌆"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">45</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Events</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+189%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">4.8/5</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Reviews</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">45 private events in 6 months • 189% increase in bookings • Featured on lifestyle blogs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid - Beach -->
+            <div id="portfolio-beach" class="portfolio-section grid lg:grid-cols-2 gap-8">
+                <!-- Beach Example 1 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Beach Resort - Holiday Campaign</h3>
+                            <p class="text-slate-400 text-sm mb-3">Azure Shores Watamu</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Holiday Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Beach resort holiday packages. All-inclusive options. Book your getaway today."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Toes in sand. Phone in drawer. Worries in Nairobi. Azure Shores: all-inclusive means ALL inclusive—cocktails, water sports, spa, three meals, and the kind of sunset that makes you rethink your career. Escape: 0721791158 🏖️"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">92%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Occupancy</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 6.8M</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">89%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Rebook</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">92% occupancy December-January • KSH 6.8M holiday revenue • 89% rebooking rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beach Example 2 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Boutique Beach Hotel - Romantic Getaway</h3>
+                            <p class="text-slate-400 text-sm mb-3">Tides Diani</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Romantic Positioning
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Romantic beach hotel. Perfect for couples. Quiet and peaceful location."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"No kids. No crowds. No agenda except 'when's the next massage?' Tides: adults-only, 12 rooms, private beach, the kind of quiet that makes you remember why you married each other. Romance: 0721791158 💑"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">96%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Occupancy</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">Couples</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Target</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">5 Features</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Press</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Couples market dominated • 96% occupancy • Featured in 5 honeymoon guides</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beach Example 3 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Beach Club - Weekend Getaway</h3>
+                            <p class="text-slate-400 text-sm mb-3">Coast Culture Kilifi</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Weekend Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Weekend beach club with pool, restaurant, and water sports. Day passes available."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Friday afternoon. Out-of-office on. Kilifi-bound. Coast Culture: infinity pool, DJ sets, ceviche that tastes like vacation, and the weekend energy Nairobi forgot. Day passes or overnight. Your escape: 0721791158 🌊"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+156%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Day Pass</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">43</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Overnight</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">12</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Events</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Day pass sales up 156% • Overnight bookings +43 • Events hosted: 12</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beach Example 4 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Luxury Beach Villa - High-End Market</h3>
+                            <p class="text-slate-400 text-sm mb-3">Private Sands Lamu</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Luxury Positioning
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Luxury beach villas for rent. Private pool and staff. Contact for availability and pricing."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Your villa. Your staff. Your private stretch of Indian Ocean. Private Sands: where billionaires bring their friends and nobody knows you're here. This isn't a vacation. It's a disappearance. Inquire: 0721791158 🏝️"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+240%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Pricing</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">100%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">High Season</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">Referral</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Only</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Ultra-luxury positioning achieved • 240% premium pricing • Referral-only bookings maintained</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black mb-6">What I Deliver</h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                    Full-spectrum copywriting services tailored for hospitality brands
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 transition-all">
+                    <i class="fab fa-instagram text-5xl text-orange-400 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Instagram & Social Copy</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Captions that stop the scroll and start conversations. Designed for bookings, not likes.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Welcome sequences
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Promotional campaigns
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Re-engagement flows
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Seasonal offers
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 transition-all">
+                    <i class="fas fa-globe text-5xl text-orange-400 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Website & Menu Copy</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Landing pages that convert visitors into bookings. Menu descriptions that upsell.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Hero sections
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> About pages
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Menu descriptions
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Booking page optimization
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 transition-all">
+                    <i class="fas fa-bullhorn text-5xl text-orange-400 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Campaign Strategy</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Full multi-channel campaigns for launches, seasons, and special events.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Launch campaigns
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Seasonal promotions
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Event marketing
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Brand positioning
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black mb-6">Client Results</h2>
+                <p class="text-xl text-slate-400">
+                    What happens when hospitality brands work with me
+                </p>
+            </div>
+
+            <div class="relative">
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-12 border border-slate-700 shadow-2xl">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active" data-testimonial="0">
+                        <div class="text-6xl text-orange-400 mb-6">"</div>
+                        <p class="text-2xl text-white font-light mb-8 leading-relaxed">
+                            Alex transformed our Instagram from a ghost town to our #1 booking source. Reservations up 67% in 90 days.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="font-bold text-lg text-white mb-1">Sarah Mwangi</div>
+                                <div class="text-slate-400 text-sm">Owner, Terrace Bistro Nairobi</div>
+                            </div>
+                            <div class="flex gap-1">
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide" data-testimonial="1">
+                        <div class="text-6xl text-orange-400 mb-6">"</div>
+                        <p class="text-2xl text-white font-light mb-8 leading-relaxed">
+                            His safari campaign copy generated $180K in bookings. Best ROI we've ever had on marketing spend.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="font-bold text-lg text-white mb-1">James Omondi</div>
+                                <div class="text-slate-400 text-sm">Director, Mara Expeditions</div>
+                            </div>
+                            <div class="flex gap-1">
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide" data-testimonial="2">
+                        <div class="text-6xl text-orange-400 mb-6">"</div>
+                        <p class="text-2xl text-white font-light mb-8 leading-relaxed">
+                            We went from 40% to 92% weekend occupancy. The captions just... work. No other way to say it.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="font-bold text-lg text-white mb-1">Rachel Kimani</div>
+                                <div class="text-slate-400 text-sm">Marketing Manager, Coast Palms Resort</div>
+                            </div>
+                            <div class="flex gap-1">
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide" data-testimonial="3">
+                        <div class="text-6xl text-orange-400 mb-6">"</div>
+                        <p class="text-2xl text-white font-light mb-8 leading-relaxed">
+                            Stopped working with our agency. Alex delivers better results solo than their entire team did.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="font-bold text-lg text-white mb-1">David Mutua</div>
+                                <div class="text-slate-400 text-sm">Co-founder, Urban Rooftop Lounge</div>
+                            </div>
+                            <div class="flex gap-1">
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                                <i class="fas fa-star text-orange-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Dots -->
+                <div class="flex justify-center gap-3 mt-8">
+                    <button onclick="showTestimonial(0)" class="testimonial-dot w-3 h-3 rounded-full transition-all duration-300 bg-orange-400 w-12" data-dot="0"></button>
+                    <button onclick="showTestimonial(1)" class="testimonial-dot w-3 h-3 rounded-full transition-all duration-300 bg-slate-700 hover:bg-slate-600" data-dot="1"></button>
+                    <button onclick="showTestimonial(2)" class="testimonial-dot w-3 h-3 rounded-full transition-all duration-300 bg-slate-700 hover:bg-slate-600" data-dot="2"></button>
+                    <button onclick="showTestimonial(3)" class="testimonial-dot w-3 h-3 rounded-full transition-all duration-300 bg-slate-700 hover:bg-slate-600" data-dot="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Works -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black mb-6">Why These Captions Convert</h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                    The psychology behind hospitality copy that actually works
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center group">
+                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4">Emotion First</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Triggers feeling before listing features. People book experiences, not amenities. They want to feel something before they act.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4">Scroll-Stoppers</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        First 5 words hook attention. No bland intros. No "we are pleased to announce." Instant impact or instant scroll.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition">🔥</div>
+                    <h3 class="text-2xl font-bold mb-4">Crystal Clear CTAs</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Every caption drives action. Book. Reserve. Inquire. DM. Call. No confusion about what to do next. Decision made easy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-orange-900/20 via-transparent to-transparent"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-500 rounded-full blur-blob"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-red-500 rounded-full blur-blob"></div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+                Ready to Fill<br>
+                <span class="gradient-text">More Tables?</span>
+            </h2>
+            
+            <p class="text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Let's craft captions that turn your Instagram into a booking engine. No fluff. No filler. Just words that convert browsers into customers.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                <a href="https://wa.me/254721791158?text=Hi!%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20copywriting%20for%20my%20hospitality%20business." target="_blank" class="group flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 px-12 py-6 rounded-xl font-bold text-xl transition transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-comment-dots"></i> WhatsApp: 0721 791 158
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </a>
+                
+                <a href="tel:+254721791158" class="group flex items-center gap-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 px-12 py-6 rounded-xl font-bold text-xl transition transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-phone"></i> Call: 0721 791 158
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </a>
+            </div>
+
+            <div class="inline-block bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl px-8 py-6">
+                <p class="text-slate-400 mb-2"><i class="fas fa-map-marker-alt"></i> <span class="text-white font-semibold">Based in Nairobi, Kenya</span></p>
+                <p class="text-slate-400">Serving hospitality brands across East Africa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t border-slate-800 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 rounded-xl flex items-center justify-center font-bold text-2xl">
+                        A
+                    </div>
+                    <div>
+                        <div class="font-bold text-lg">Alex Copywriter</div>
+                        <div class="text-xs text-slate-400">Hospitality & F&B Specialist</div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-slate-500 text-sm">© 2024 Alex Copywriter</p>
+                    <p class="text-slate-600 text-xs mt-1">Turning hospitality brands into booking machines</p>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="tel:+254721791158" class="text-slate-400 hover:text-orange-400 transition">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/254721791158" target="_blank" class="text-slate-400 hover:text-green-400 transition">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254721791158" target="_blank" class="fixed bottom-6 right-6 z-50 bg-gradient-to-br from-green-600 to-green-500 p-5 rounded-full shadow-2xl transition transform hover:scale-110 active:scale-95">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fas fa-bars';
+            } else {
+                menuIcon.className = 'fas fa-times';
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/98', 'backdrop-blur-lg', 'shadow-2xl');
+            } else {
+                navbar.classList.remove('bg-slate-900/98', 'backdrop-blur-lg', 'shadow-2xl');
+            }
+        });
+
+        // Sector switching
+        function showSector(sector) {
+            // Hide all portfolio sections
+            document.querySelectorAll('.portfolio-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById('portfolio-' + sector).classList.add('active');
+            
+            // Update tab styles
+            document.querySelectorAll('.sector-tab').forEach(tab => {
+                tab.classList.remove('bg-gradient-to-r', 'from-orange-600', 'to-red-600', 'text-white', 'shadow-xl', 'scale-105');
+                tab.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            
+            // Highlight active tab
+            const activeTab = document.querySelector(`[data-sector="${sector}"]`);
+            if (activeTab) {
+                activeTab.classList.remove('bg-slate-800', 'text-slate-300');
+                activeTab.classList.add('bg-gradient-to-r', 'from-orange-600', 'to-red-600', 'text-white', 'shadow-xl', 'scale-105');
+            }
+            
+            // Scroll to work section
+            document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Testimonial switching
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+
+        function showTestimonial(index) {
+            // Hide all testimonials
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('active');
+            });
+            
+            // Show selected testimonial
+            testimonials[index].classList.add('active');
+            
+            // Update dots
+            dots.forEach(dot => {
+                dot.classList.remove('bg-orange-400', 'w-12');
+                dot.classList.add('bg-slate-700', 'w-3');
+            });
+            
+            dots[index].classList.remove('bg-slate-700', 'w-3');
+            dots[index].classList.add('bg-orange-400', 'w-12');
+            
+            currentTestimonial = index;
+        }
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.className = 'fas fa-bars';
+                }
+            });
+        });
+    </script>
+</body>
+</html>text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Daily content strategy
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Hashtag optimization
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Story sequences
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-check-circle text-green-400"></i> Reel scripts
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-orange-500/50 transition-all">
+                    <i class="fas fa-envelope text-5xl text-orange-400 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Email Campaigns</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Newsletters that get opened. Promotions that get clicked. Sequences that convert.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 </div>
+                                    <p class="text-slate-300 text-sm font-medium">42% increase in reservations • 3.2K new Instagram followers in first month</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Example 2 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Seafood Restaurant - Weekend Special</h3>
+                            <p class="text-slate-400 text-sm mb-3">Harbor Grill Mombasa</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Social Media Campaign
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Weekend special: Fresh fish available. Come try our new menu items this weekend."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Ocean-fresh catches. Chef's knife. Your plate. This weekend only—grilled prawns the size of your ambition, butter-garlic mussels that don't need Instagram filters. Reserve: 0721791158 🦞"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+203%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Engagement</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">Sold Out</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+89%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact</div>
+                                    <p class="text-slate-300 text-sm font-medium">Weekend bookings sold out 3 days early • 89% table occupancy vs 54% previous</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Example 3 -->
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all group">
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-2 group-hover:text-orange-400 transition">Rooftop Restaurant - Valentine's Campaign</h3>
+                            <p class="text-slate-400 text-sm mb-3">Sky Lounge Westlands</p>
+                            <span class="inline-block text-xs bg-slate-700 px-4 py-2 rounded-full text-slate-300 font-semibold">
+                                Campaign Series
+                            </span>
+                        </div>
+
+                        <div class="mb-5 p-5 bg-slate-900 rounded-xl border-l-4 border-red-500">
+                            <div class="text-xs font-black text-red-400 bg-red-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ❌ BEFORE
+                            </div>
+                            <p class="text-slate-400 italic text-sm leading-relaxed">"Valentine's dinner available. Limited seats. Book early to avoid disappointment."</p>
+                        </div>
+
+                        <div class="mb-6 p-5 bg-slate-900 rounded-xl border-l-4 border-green-500">
+                            <div class="text-xs font-black text-green-400 bg-green-500/10 px-3 py-1 rounded-full mb-3 inline-block">
+                                ✅ AFTER
+                            </div>
+                            <p class="text-white text-sm font-medium leading-relaxed">"Above the city lights. Below the stars. Just you two. Valentine's at Sky Lounge—where every moment becomes a memory you'll tell your grandkids. 12 tables only. Secure yours: 0721791158 ❤️"</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">+312%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Engagement</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">100%</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Bookings</div>
+                            </div>
+                            <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                                <div class="text-orange-400 font-black text-lg">KSH 890K</div>
+                                <div class="text-slate-500 text-xs uppercase tracking-wide">Revenue</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-chart-line text-green-400 mt-1"></i>
+                                <div>
+                                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Impact
